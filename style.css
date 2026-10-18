@@ -1,0 +1,238 @@
+/* the variables */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --black: #0F0F0F;
+    --darkblack: #1B1B1B;
+    --white: #F2F2F2;
+    --grey: #9A9A9A;
+    --orange: #E4572E;
+    --darkorange: #C0441F;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "poppins" sans-serif;
+    background: var(--black);
+    color: var(--white);
+}
+
+h1, h2, h3 {
+    font-family: "bebas neue";
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-book,
+.btn-booknow,
+.btn-seeprice {
+    font-family: "poppins";
+}
+
+
+/* remember to change all the font family of your buttons to poppins */
+main {
+    padding-top: 80px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--black);
+}
+
+.logo {
+    color: var(--white);
+    padding: 10px;
+    font-size: 30px;
+    font-family: "bebas neue";
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a{
+    color: var(--grey);
+    font-size: 15px;
+    transition:  color 0.3s;
+    font-family: "poppins";
+}
+
+nav a:hover{
+    color: var(--white);
+}
+
+.btn-book {
+    background-color: var(--orange);
+    color: var(--black);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.btn-book:hover {
+    background-color: var(--darkorange);
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: fadeUp 0.8s ease;
+}
+
+.hero-content h1 {
+    font-size: 96px;
+    color: var(--white);
+    padding: 32px;
+    line-height: 0.95;
+    margin-bottom: 16px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: var(--grey);
+    margin-bottom: 24px;
+    font-family: "poppins";
+    padding: 32px;
+    margin-top: 0;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 30px;
+    justify-content: left;
+    padding-left: 32px;
+    margin-top: 0;
+}
+
+.btn-booknow {
+    background-color: var(--orange);
+    color: var(--black);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-seeprice {
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-seeprice:hover {
+    background-color: var(--darkorange);
+}
+
+.btn-booknow:hover {
+    background-color: var(--darkorange);
+}
+
+.pole{
+    height: 10px;
+    background: repeating-linear-gradient(
+        -45deg, 
+        #E4572E 0 12px,
+        #F2F2F2 12px 24px
+    );
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#services {
+    padding: 80px 50px;
+    color: var(--white);
+}
+
+.services-content h2{
+    font-size: 48px;
+}
+
+.services-content p {
+    font-size: 16px;
+    color: var(--grey);
+    font-family: "poppins";
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+    margin: 0;
+    padding: 0;
+}
+
+.services-item {
+    font-size: 1.05rem;
+    display: flex;
+    padding: 16px 14px;
+    gap: 12px;
+    font-family: "poppins";
+    align-items: baseline;
+    max-width: 640px;
+    border-bottom: 1px solid #262626;
+    cursor: pointer;
+}
+
+.services-name {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.dotline {
+    flex: 1;
+    border-bottom: 2px dotted #3a3a3a;
+}
+
+.services-price {
+    font-weight: 600;
+    color: var(--orange);
+}
