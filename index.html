@@ -98,10 +98,10 @@
 
         <div class="gallery-grid">
             <img src="images/cut1.jpeg" alt="High Taper Fade">
-            <img src="images/cut2.jpeg" alt="High Taper Fade">
+            <img src="images/cut6.jpeg" alt="High Taper Fade">
             <img src="images/cut3.jpeg" alt="Braids">
             <img src="images/cut4.jpeg" alt="Low Taper Fade">
-            <img src="images/cut6.jpeg" alt="Dreads">
+            <img src="images/cut2.jpeg" alt="Dreads">
             <img src="images/cut7.jpeg" alt="Mid Fade">
         </div>
     </section>
@@ -142,12 +142,50 @@
              <p class="faq-p">Yes, we take cash and transfer. </p>
             </div>
         </div>
+    </section>
 
+    <section class="book" id="book">
+        <div class="book-content">
+            <h2>BOOK YOUR CHAIR</h2>
+            <p>Pick a day and we will hold your time</p>
+          <form>
+            <input type="text" class="booking-field" id="yourname" placeholder="Your name"> <br>
+            <input type="tel"  class="booking-field" id="phonenumber" placeholder="Phone Number"> <br>
+            <input type="text" class="booking-field" id="preferredday" placeholder="Preferred day"> <br>
+            <label for="booking-service"></label>
+            <select name="service" class="booking-field" id="booking-service">
+                <option value="">Service</option>
+                <option value="classic-cut">Classic Cut</option>
+                <option value="skin-fade">Skin Fade</option>
+                <option value="beard-trim">Beard Trim</option>
+                <option value="hot-towel-shave">Hot Towel Shave</option>
+                <option value="kids-cut">Kids Cut</option>
+                <option value="cut-beard-combo">Cut + Beard Combo</option>
+            </select>
+            <p id="booking-error">Enter your name and phone number!</p>
+              <a href="#book" class="btn-book">Book now</a>
+          </form>
+          <div id="booking-success">
+            <h3>Thank you, <span id="thank-name">!</span></h3>
+            <p>We'll see you on <span id="thank-day">.</span></p>
+          </div>
+        </div>
+      
     </section>
     </main>
 
-    <footer>
-
+     <div class="footer-pole"></div>
+    <footer class="footer">
+        
+         <div class="footer-info">
+            <h2>CROWN & FADE</h2>
+            <p>Sharp cuts since 2019.</p> <br>
+            <p>12 Allen Avenue, Ikeja, Lagos</p>
+            <a href="tel">+234 807 826 2510</a> <br><br>
+            <p>Mon to Sat: 9am to 8pm</p>
+            <p>Sun: Closed</p> <br>
+            <p id="footer-copy">&copy; Crown & Fade Barbershop. Built by <a href="https://www.linkedin.com/in/henry-emelife-b10455416?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Henry Emelife</a>.  All rights reserved.</p>
+         </div>
     </footer>
 
     <script src="script.js"></script>
