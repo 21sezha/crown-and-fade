@@ -415,3 +415,26 @@ nav a:hover{
 #footer-copy a{
     color: var(--white);
 }
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #d4a63a;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* this is the styling for the hamburger for the responsive web design */
+ /* .navbar nav.open {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #111;
+        text-align: center; */
