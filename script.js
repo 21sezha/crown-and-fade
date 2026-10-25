@@ -42,4 +42,56 @@ serviceItems.forEach(function (item){
 });
 
 
-const galleryGrid = document.querySelectorAll(".gallery-grid");
+const galleryImages = document.querySelectorAll(".gallery-grid img");
+const Overlay = document.querySelector(".image-overlay");
+const overlayImg = document.querySelector(".image-overlay img");
+
+galleryImages.forEach((image)=> {
+    image.addEventListener("click", ()=> {
+        overlayImg.src = image.src;
+        Overlay.classList.add("active");
+        document.body.classList.add("no-scroll");
+    });
+});
+
+Overlay.addEventListener("click", ()=> {
+    Overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+});
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+    item.addEventListener("click", ()=> {
+        faqItems.forEach((faq) => {
+            if (faq !== item) {
+            faq.classList.remove("open");
+            }
+        });
+        item.classList.toggle("open");
+    });
+});
+
+
+const nameInput= document.querySelector("#yourname");
+const phoneInput = document.querySelector("#phonenumber");
+const dayInput = document.querySelector("#preferredday");
+const bookingError = document.querySelector("#booking-error");
+const bookingSuccess = document.querySelector("#booking-success");
+const thankName = document.querySelector("#thank-name");
+const thankDay = document.querySelector("#thank-day");
+const bookingForm = document.querySelector(".book-content form");
+const bookButton = document.querySelector("#book-button");
+
+bookButton.addEventListener("click", (e)=>{
+    e.preventDefault();
+    if (nameInput.value.trim() === "" || phoneInput.value.trim() === "") {
+        bookingError.style.display = "block";
+        return;
+    }
+    bookingError.style.display = "none";
+    thankName.textContent = nameInput.value;
+    thankDay.textContent= dayInput.value;
+    bookingForm.style.display = "none";
+    bookingSuccess.style.display = "block";
+});

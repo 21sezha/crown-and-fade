@@ -307,6 +307,12 @@ nav a:hover{
 
 .faq-symbol {
     color: var(--orange);
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.faq-item.open .faq-symbol {
+    transform: rotate(45deg);
 }
 
 .faq-question {
@@ -315,10 +321,19 @@ nav a:hover{
     align-items: center;
     padding: 18px;
     cursor: pointer;
+    flex-wrap: wrap;
+    color: var(--white);
 }
 
-.faq p {
+.faq-p {
     display: none;
+    width: 100%;
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.faq-item.open .faq-p {
+    display: block;
 }
 
 .book {
@@ -424,6 +439,35 @@ nav a:hover{
     color: #d4a63a;
     font-size: 1.8rem;
     cursor: pointer;
+}
+
+.image-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.image-overlay.active {
+    display: flex;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+
+.image-overlay img {
+    max-width: 85%;
+    max-height: 85%;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 /* this is the styling for the hamburger for the responsive web design */
