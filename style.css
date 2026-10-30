@@ -308,11 +308,7 @@ nav a:hover{
 .faq-symbol {
     color: var(--orange);
     display: inline-block;
-    transition: transform 0.3s;
-}
-
-.faq-item.open .faq-symbol {
-    transform: rotate(45deg);
+   
 }
 
 .faq-question {
@@ -524,7 +520,7 @@ body.no-scroll {
     .navbar nav .nav-book:hover {
         background-color: var(--darkorange);
     }
-    .btn-book {
+     .navbar .btn-book {
         display: none;
     }
     .hero {

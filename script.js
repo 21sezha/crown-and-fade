@@ -69,7 +69,18 @@ faqItems.forEach((item) => {
             }
         });
         item.classList.toggle("open");
-    });
+  
+
+     faqItems.forEach((faq) => {
+        const symbol = faq.querySelector(".faq-symbol");
+        if (faq.classList.contains("open")) {
+            symbol.textContent = "-";
+        }
+        else {
+            symbol.textContent = "+";
+        }
+       });
+      });
 });
 
 
